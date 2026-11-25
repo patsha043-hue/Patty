@@ -1,0 +1,8 @@
+{
+  "name": "Remix Keselamatan di Jalan Raya: Jom Kenali Kata Adjektif!",
+  "description": "Laman web pembelajaran digital interaktif (OPD) Bahasa Melayu Tahun 2 bertemakan Keselamatan di Jalan Raya untuk mengenali Kata Adjektif.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

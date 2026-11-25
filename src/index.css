@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Nunito", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Quicksand", ui-sans-serif, system-ui, sans-serif;
+  --color-sky-brand: #83C9F4;
+  --color-sunshine: #FFD966;
+  --color-mint: #A8DDB5;
+  --color-coral: #FF8585;
+  --color-cream: #FFF8E8;
+  --color-navy: #29466B;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    color: #29466B;
+    background-color: #FFF8E8;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+.cartoon-card {
+  border: 2px solid rgba(41, 70, 107, 0.14);
+  box-shadow: 0 6px 0 rgba(41, 70, 107, 0.1);
+}
+
+.cartoon-card-interactive {
+  border: 2px solid rgba(41, 70, 107, 0.14);
+  box-shadow: 0 6px 0 rgba(41, 70, 107, 0.1);
+  transition: transform 180ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cartoon-card-interactive:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 0 rgba(41, 70, 107, 0.13);
+}
+
+.cartoon-btn {
+  border: 2px solid #29466B;
+  box-shadow: 0 4px 0 #29466B;
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 150ms cubic-bezier(0.16, 1, 0.3, 1), background-color 150ms ease;
+}
+
+.cartoon-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 #29466B;
+}
+
+.cartoon-btn:active:not(:disabled) {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #29466B;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .cartoon-card-interactive,
+  .cartoon-btn {
+    transition: none;
+  }
+}
+
+@media print {
+  header,
+  footer,
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .print-only-worksheet {
+    box-shadow: none !important;
+    border: 1.5px solid #29466B !important;
+    background: #ffffff !important;
+  }
+}
